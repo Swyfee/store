@@ -1,13 +1,26 @@
-  <div class="card-conteneur">
-    <div *ngFor="let product of products">
-      <div class="card" style="width: 18rem;">
-        <h5 class="card-header">{{ product.name }}</h5>
-        <img src="{{ product.image }}" class="card-img-top" alt="Image de {{ product.name }}">
-        <div class="card-body">
-          <p class="card-text">{{product.description}}.</p>
-          <p class="card-text">{{product.price}} €</p>
-          <a href="#" class="btn btn-primary">Acheter</a>
-        </div>
-     </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Tibo</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="https://modest-neumann-1b106a.netify.com/">Products <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">Cart</a>
     </div>
   </div>
+</nav>
+
+<div class="card-conteneur">
+   <div *ngFor="let product of products">
+     <div class="card">
+       <h5 class="card-header">{{ product.name }}</h5>
+       <img src="{{ product.image }}" class="card-img-top" alt="Image de {{ product.name }}">
+       <div class="card-body">
+         <p class="card-text">{{product.description}}.</p>
+         <p class="card-text">{{product.price}} €</p>
+         <a href="#" class="btn btn-primary">Acheter</a>
+       </div>
+    </div>
+   </div>
+ </div>
